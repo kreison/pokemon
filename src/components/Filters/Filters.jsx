@@ -8,8 +8,6 @@ const Filters = () => {
         <div>
             <Accordion >
                 <AccordionSummary
-                // aria-controls="panel1a-content"
-                // id="panel1a-header"
                 >
                     <Typography>Поколение</Typography>
                 </AccordionSummary>

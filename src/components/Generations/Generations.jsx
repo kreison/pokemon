@@ -2,16 +2,14 @@ import React, {useEffect, useState } from 'react';
 import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { sortToGenerationThunk } from '../../redux/thunk/sortToGenerationThunk';
+
 //предупреждение. из-за сортировки по поколениям не пагинация
 
 const Generations = () => {
-    const state = useSelector(state => state.pokemons.pokemons);
     const dispatch = useDispatch()
-    const [currentGeneration, setCurrentGeneration] = useState('')
-    
+    const [currentGeneration, setCurrentGeneration] = useState('')   
     useEffect(()=>{
         dispatch(sortToGenerationThunk(currentGeneration));
-        // console.log(state)
     }, [currentGeneration])
 
     return (

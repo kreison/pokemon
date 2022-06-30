@@ -19,7 +19,6 @@ const AboutPokemon = () => {
 
     useEffect(() => {
         dispatch(getInfoThunk(url));
-        
     }, [])
     
 

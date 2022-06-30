@@ -5,11 +5,9 @@ export const sortingThunk = (type = 'power', pokemons) => {
     return async (dispath) => {
         dispath(IS_LOADING_ACTION())
         const isSorting = [];
-        // pokemons.map(async item => {
         for (let i = 0; i < pokemons.length; i++) {
             const power = await fetch(pokemons[i].url);
             const powerJson = await power.json()
-            // console.log();
             switch (type) {
                 case 'power':
                     isSorting.push({ power: powerJson.stats[1].base_stat, ...pokemons[i] })
@@ -25,10 +23,8 @@ export const sortingThunk = (type = 'power', pokemons) => {
                     
             }
             
-
         }
         const sorted = isSorting.sort((a, b) => b.power > a.power ? 1 : -1);
-
         for (let i = 0; i < sorted.length; i++) {
             delete sorted[i].power
         }

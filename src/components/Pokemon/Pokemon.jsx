@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './pokemon.css'
 import { Link } from 'react-router-dom';
 
-const Pokemon = ({ name, url }) => {
-
+const Pokemon = ({ url }) => {
     const [img, setImg] = useState('#');
     const [response, setReponse] = useState('')
     useEffect(() => {
@@ -16,8 +15,6 @@ const Pokemon = ({ name, url }) => {
     }, [])
     return (
         <div className='pokemon'>
-
-
             <Link to={ `/pokemons/${response.id}` }>
                 <div className='containerOfImage'>
                     <div className="borderOfImage">
@@ -27,8 +24,6 @@ const Pokemon = ({ name, url }) => {
                 </div>
             </Link>
             <div className='nameOfPokemon'>{ response.name }</div>
-
-            {/* {response.id} */ }
         </div>
     );
 };

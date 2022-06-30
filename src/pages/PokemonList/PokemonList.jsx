@@ -25,20 +25,14 @@ const PokemonList = () => {
         switch (pageRedux) {
             case 1:
                 dispath(sortPageThunk('power', 4, 0))
-                // dispath(sortThunk('power', pokemons))
                 break
             case 2:
                 dispath(sortPageThunk('power', 4, 4))
-                // dispath(sortThunk('power', pokemons ))
                 break
             default:
                 dispath(sortPageThunk('power', 4, pageRedux * 4))
-                // dispath(sortThunk('power', pokemons))
         }
     }, [pageRedux])
-
-
-
 
     return (
         <div className="container main">
@@ -65,7 +59,7 @@ const PokemonList = () => {
                         ?
                         <CircularProgress />
                         :
-                        <Pagination onChange={ (e, page) => setPages(page) } defaultPage={ pages } count={ pages + 10 } color="primary" />
+                        <Pagination onChange={ (e, page) => setPages(page) } defaultPage={pages} count={ pages + 10 } color="primary" />
 
                 }
 
