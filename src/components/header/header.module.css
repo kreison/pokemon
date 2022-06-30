@@ -1,0 +1,25 @@
+.header{
+    background-color: #c83c29;
+    height: 85px;
+    border-bottom: 5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.headerList{
+    display: flex;
+}
+.headerList li{
+    list-style: none;
+
+}
+.headerList li:not(:last-child){
+    margin-right: 50px;
+}
+.headerList li .link{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}

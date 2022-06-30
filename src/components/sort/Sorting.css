@@ -1,0 +1,18 @@
+.sortingContainer{
+    text-align: left;
+    margin-bottom: 50px;
+}
+.sortingList{
+    display: flex;
+    margin-top: 20px;
+    
+}
+.sortingList li{
+    list-style: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.sortingList li:not(:last-child){
+    margin-right: 30px;
+    
+}
