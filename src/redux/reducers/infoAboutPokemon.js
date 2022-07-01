@@ -3,7 +3,6 @@ import { types } from '../types';
 export const infoAboutPokemon = (state={info: {stats: {}}, names: [], abilities: []}, action)=>{
     switch (action.type){
         case types.GET_INFO_ABOUT_POKEMON:
-            
             return {...state, info: action.payload}
         case types.GET_NAMES:
             return {...state, names: action.payload}

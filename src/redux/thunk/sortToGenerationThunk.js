@@ -14,12 +14,9 @@ export const sortToGenerationThunk = (cg, limit = 100, offset = 1) => {
             for (let i = 0; i < pokemonsJson.results.length; i++) {
                 const moreInfo = await fetch(pokemonsJson.results[i].url);
                 const moreInfoJson = await moreInfo.json()
-                // console.log(moreInfoJson)
                 const abilities = await fetch(moreInfoJson.abilities[0].ability.url);
                 const abilitesJson = await abilities.json();
-                if (abilitesJson.generation.name === `generation-${cg}`) {
-                    // RENDER_POKEMONS_ACTION(pokemonsJson.results[i]);
-                    // console.log(pokemonsJson.results[i])
+                if (abilitesJson.generation.name === `generation-${cg}`) {     
                     filtered.push(pokemonsJson.results[i])
                 }
             }

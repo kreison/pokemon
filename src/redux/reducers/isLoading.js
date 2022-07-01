@@ -4,7 +4,6 @@ import { types } from '../types';
 export const isLoading = (state={isLoading: true}, action) => {
     switch(action.type){
         case types.IS_LOADED:
-            
             return {...state, isLoading: false }
         case types.IS_LOADING:
             

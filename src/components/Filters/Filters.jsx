@@ -1,5 +1,5 @@
 import { Accordion, AccordionDetails, AccordionSummary, Checkbox, FormControlLabel, FormGroup, Typography } from '@mui/material';
-import React, { useEffect } from 'react';
+import React from 'react';
 import Generations from '../Generations/Generations';
 
 const Filters = () => {
@@ -12,7 +12,9 @@ const Filters = () => {
                     <Typography>Поколение</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
+
                     <Generations />
+
                 </AccordionDetails>
             </Accordion>
             <Accordion>
